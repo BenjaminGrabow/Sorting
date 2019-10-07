@@ -8,11 +8,13 @@ def selection_sort( arr ):
       arr[i], arr[smallest_num_index] = arr[smallest_num_index], arr[i]
     return arr
 
+# SOLUTION WITH WHILE LOOP
+
 # add recursive selection sort for deeper understanding of algorithm
 
 # TO-DO:  implement the Bubble Sort function below
 
-# while loop 
+# SOLUTION WITH WHILE LOOP
 # def bubble_sort(arr):
 #   check = True
 #   while check:
@@ -23,7 +25,7 @@ def selection_sort( arr ):
 #         check = True
 #   return arr
 
-# try with double loop:
+# SOLUTION WITH DOUBLE LOOP
 def bubble_sort(arr):
   for i in arr:
     for j in range(0, len(arr) - 1):

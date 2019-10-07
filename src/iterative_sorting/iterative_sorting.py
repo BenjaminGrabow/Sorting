@@ -9,8 +9,6 @@ def selection_sort(arr):
         arr[i], arr[smallest_num_index] = arr[smallest_num_index], arr[i]
     return arr
 
-# SOLUTION WITH WHILE LOOP
-
 # TO-DO:  implement the Bubble Sort function below
 
 # SOLUTION WITH WHILE LOOP

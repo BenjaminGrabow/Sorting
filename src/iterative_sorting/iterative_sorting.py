@@ -19,6 +19,8 @@ def selection_sort( arr ):
 
 
 # TO-DO:  implement the Bubble Sort function below
+
+# while loop 
 def bubble_sort(arr):
   check = True
   while check:
@@ -29,6 +31,9 @@ def bubble_sort(arr):
         check = True
   return arr
 
+# try with double loop:
+
+# try with recursive solution:
 
 # STRETCH: implement the Count Sort function below
 def count_sort( arr, maximum=-1 ):

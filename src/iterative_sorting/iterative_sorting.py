@@ -21,17 +21,24 @@ def selection_sort( arr ):
 # TO-DO:  implement the Bubble Sort function below
 
 # while loop 
-def bubble_sort(arr):
-  check = True
-  while check:
-    check = False
-    for index in range(0, len(arr) - 1):
-      if arr[index] > arr[index + 1]:
-        arr[index], arr[index + 1] = arr[index + 1], arr[index]
-        check = True
-  return arr
+# def bubble_sort(arr):
+#   check = True
+#   while check:
+#     check = False
+#     for index in range(0, len(arr) - 1):
+#       if arr[index] > arr[index + 1]:
+#         arr[index], arr[index + 1] = arr[index + 1], arr[index]
+#         check = True
+#   return arr
 
 # try with double loop:
+def bubble_sort(arr):
+  for i in arr:
+    for j in range(0, len(arr) - 1):
+      if arr[j] > arr[j + 1]:
+        arr[j], arr[j + 1] = arr[j + 1], arr[j]
+  return arr
+
 
 # try with recursive solution:
 

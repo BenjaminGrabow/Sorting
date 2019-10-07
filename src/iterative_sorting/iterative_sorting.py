@@ -41,7 +41,16 @@ def bubble_sort(arr):
         arr[i], arr[j] = arr[j], arr[i]
   return arr
 
-:
+#RECURSIVE SOLUTION BUBBLE SORT
+def bubble_sort(arr): 
+    for i in range(len(arr)): 
+        try: 
+            if arr[i] > arr[i+1]: 
+                arr[i], arr[i + 1] = arr[i + 1], arr[i]  
+                bubble_sort(arr) 
+        except IndexError: 
+            pass
+    return arr 
 
 # STRETCH: implement the Count Sort function below
 def count_sort( arr, maximum=-1 ):

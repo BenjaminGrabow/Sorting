@@ -8,13 +8,13 @@ def merge( arrA, arrB ):
         result.append(arrA[arrA_index])
         arrA_index += 1
       else:
-        result.append(arrB[arrA_index])
+        result.append(arrB[arrB_index])
         arrB_index += 1
     
     if arrA_index == len(arrA):
-      result.extend(arrB[:arrB_index])
+      result.extend(arrB[arrB_index:])
     else:
-      result.extend(arrA[:arrA_index])
+      result.extend(arrA[arrA_index:])
 
     return result
 

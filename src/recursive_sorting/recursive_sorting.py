@@ -31,6 +31,36 @@ def merge_sort( arr ):
     #merge the now sorted sublists
     return merge(leftArray, rightArray)
 
+#Single method solution 
+def mergeSort(arr): 
+    if len(arr) >1: 
+        mid = len(arr)//2 
+        leftList = arr[:mid]   
+        rightList = arr[mid:] 
+  
+        mergeSort(leftList)
+        mergeSort(rightList)
+  
+        leftIndex = rightIndex = resultIndex = 0
+          
+        while leftIndex < len(leftList) and rightIndex < len(rightList): 
+            if leftList[leftIndex] < rightList[rightIndex]: 
+                arr[resultIndex] = leftList[leftIndex] 
+                leftIndex+=1
+            else: 
+                arr[resultIndex] = rightList[rightIndex] 
+                rightIndex+=1
+            resultIndex+=1
+          
+        while leftIndex < len(leftList): 
+            arr[resultIndex] = leftList[leftIndex] 
+            leftIndex+=1
+            resultIndex+=1
+          
+        while rightIndex < len(rightList): 
+            arr[resultIndex] = rightList[rightIndex] 
+            rightIndex+=1
+            resultIndex+=1
 
 # STRETCH: implement an in-place merge sort algorithm
 def merge_in_place(arr, start, mid, end):

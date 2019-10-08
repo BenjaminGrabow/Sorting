@@ -15,13 +15,19 @@ def merge( arrA, arrB ):
       result.extend(arrB[:arrB_index])
     else:
       result.extend(arrA[:arrA_index])
+
     return result
 
 
 def merge_sort( arr ):
+    if len(arr) <= 1:
+      return arr
+    
+    midpoint = int(len(arr) / 2)
 
+    leftArray, rightArray = merge_sort(arr[:midpoint]), merge_sort(arr[midpoint:])
 
-    return arr
+    return merge(leftArray, rightArray)
 
 
 # STRETCH: implement an in-place merge sort algorithm

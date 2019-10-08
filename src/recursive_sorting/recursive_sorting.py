@@ -1,5 +1,20 @@
 def merge( arrA, arrB ):
+    result = []
+
+    arrA_index = arrB_index = 0
+
+    while arrA_index < len(arrA) and arrB_index < len(arrB):
+      if arrA[arrA_index] < arrB[arrB_index]:
+        result.append(arrA[arrA_index])
+        arrA_index += 1
+      else:
+        result.append(arrB[arrA_index])
+        arrB_index += 1
     
+    if arrA_index == len(arrA):
+      result.extend(arrB[:arrB_index])
+    else:
+      result.extend(arrA[:arrA_index])
     return result
 
 

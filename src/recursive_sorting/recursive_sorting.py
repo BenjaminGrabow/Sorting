@@ -31,12 +31,15 @@ def merge_sort( arr ):
     #merge the now sorted sublists
     return merge(leftArray, rightArray)
 
+
+
+
 #Single method solution 
 def mergeSort(arr): 
     if len(arr) >1: 
-        mid = len(arr)//2 
-        leftList = arr[:mid]   
-        rightList = arr[mid:] 
+        midpoint = int(len(arr)/2) 
+        leftList = arr[:midpoint]   
+        rightList = arr[midpoint:] 
   
         mergeSort(leftList)
         mergeSort(rightList)
